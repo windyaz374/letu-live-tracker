@@ -1,0 +1,29 @@
+version: '3.8'
+
+services:
+  letu-tracker:
+    build: .
+    container_name: letu-live-tracker
+    ports:
+      - "5000:5000"    # Backend API
+      - "5173:5000"    # Frontend (mapped to same backend port)
+    volumes:
+      # Mount credentials directory for Google Sheets
+      - ./data:/app/data
+      - ./backend/credentials.json:/app/backend/credentials.json:ro
+      - ./backend/token.json:/app/backend/token.json
+    environment:
+      - FLASK_ENV=production
+      - PYTHONUNBUFFERED=1
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:5000/api/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 40s
+    networks:
+      - letu-network
+networks:
+  letu-network:
+    driver: bridge

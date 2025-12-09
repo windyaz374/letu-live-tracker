@@ -8,22 +8,42 @@ A real-time livestream product data scraper that updates Google Sheets automatic
 - Real-time updates to Google Sheets
 - Simple UI for session management
 - Cross-platform support (Linux development, Windows deployment)
+- **🐳 Docker support for easy deployment**
 
 ## Architecture
 
 - **Frontend**: React (Vite)
 - **Backend**: Python Flask with Selenium
 - **Data Export**: Google Sheets API
+- **Deployment**: Docker (recommended) or traditional installation
 
-## Prerequisites
+## 🚀 Quick Start
 
-### For Windows Users
+### Option 1: Docker (Recommended - Easiest!)
+
+**Prerequisites:** Just Docker Desktop!
+
+```bash
+# Windows: Double-click
+docker-start.bat
+
+# Linux/Mac: Run
+./docker-start.sh
+```
+
+📖 See [DOCKER_GUIDE.md](doc/DOCKER_GUIDE.md) for complete Docker instructions.
+
+### Option 2: Traditional Installation
+
+**Prerequisites:**
+
+#### For Windows Users
 
 1. Python 3.8+ ([Download](https://www.python.org/downloads/))
 2. Node.js 16+ ([Download](https://nodejs.org/))
 3. Chrome browser installed
 
-### For Linux/Mac Users
+#### For Linux/Mac Users
 
 1. Python 3.8+
 2. Node.js 16+
@@ -31,16 +51,26 @@ A real-time livestream product data scraper that updates Google Sheets automatic
 
 ## Installation
 
-### Step 1: Clone the repository
+### 🐳 Docker Installation (Recommended)
+
+1. Install Docker Desktop: https://www.docker.com/products/docker-desktop
+2. Place `credentials.json` in `backend/` folder (see [GOOGLE_SHEETS_SETUP.md](doc/GOOGLE_SHEETS_SETUP.md))
+3. Run `docker-start.bat` (Windows) or `./docker-start.sh` (Linux/Mac)
+
+**That's it!** 🎉
+
+### 🔧 Traditional Installation
+
+#### Step 1: Clone the repository
 
 ```bash
 git clone <repository-url>
 cd letu-live-tracker
 ```
 
-### Step 2: Backend Setup
+#### Step 2: Backend Setup
 
-#### Windows
+**Windows:**
 ```cmd
 cd backend
 python -m venv venv
@@ -48,7 +78,7 @@ venv\Scripts\activate
 pip install -r requirements.txt
 ```
 
-#### Linux/Mac
+**Linux/Mac:**
 ```bash
 cd backend
 python3 -m venv venv
@@ -56,14 +86,14 @@ source venv/bin/activate
 pip install -r requirements.txt
 ```
 
-### Step 3: Frontend Setup
+#### Step 3: Frontend Setup
 
 ```bash
 cd frontend
 npm install
 ```
 
-### Step 4: Google Sheets API Setup
+#### Step 4: Google Sheets API Setup
 
 1. Go to [Google Cloud Console](https://console.cloud.google.com/)
 2. Create a new project
@@ -74,9 +104,27 @@ npm install
 
 ## Running the Application
 
-### Windows
+### 🐳 With Docker (Recommended)
 
-Run the provided batch file:
+**Windows:**
+```cmd
+docker-start.bat
+```
+
+**Linux/Mac:**
+```bash
+./docker-start.sh
+```
+
+**Stop:**
+```bash
+docker-stop.bat  # Windows
+./docker-stop.sh # Linux/Mac
+```
+
+### 🔧 Traditional Method
+
+**Windows:**
 ```cmd
 start.bat
 ```
@@ -93,9 +141,7 @@ cd frontend
 npm run dev
 ```
 
-### Linux/Mac
-
-Run the provided shell script:
+**Linux/Mac:**
 ```bash
 ./start.sh
 ```

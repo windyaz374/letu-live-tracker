@@ -1,16 +1,42 @@
-from flask import Flask, request, jsonify
+from flask import Flask, request, jsonify, send_from_directory
 from flask_cors import CORS
 import threading
 import time
+import os
+
 from scraper import ShopeeStreamScraper
 from sheets_handler import GoogleSheetsHandler
 
-app = Flask(__name__)
+# Configure Flask to serve frontend
+app = Flask(__name__, 
+            static_folder='../frontend/dist',
+            static_url_path='')
 CORS(app)
 
 # Store active scrapers
 active_scrapers = {}
 
+# ============================================
+# FRONTEND ROUTES
+# ============================================
+
+@app.route('/')
+def serve_frontend():
+    """Serve React frontend"""
+    return send_from_directory(app.static_folder, 'index.html')
+
+@app.route('/<path:path>')
+def serve_static(path):
+    """Serve static files (JS, CSS, images)"""
+    if os.path.exists(os.path.join(app.static_folder, path)):
+        return send_from_directory(app.static_folder, path)
+    else:
+        # For React Router - serve index.html
+        return send_from_directory(app.static_folder, 'index.html')
+
+# ============================================
+# API ROUTES
+# ============================================
 @app.route('/api/health', methods=['GET'])
 def health_check():
     """Health check endpoint"""

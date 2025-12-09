@@ -1,0 +1,55 @@
+# Node modules
+node_modules/
+frontend/node_modules/
+frontend/dist/
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+venv/
+env/
+ENV/
+*.egg-info/
+.eggs/
+*.egg
+
+# Credentials (will be mounted as volume)
+backend/credentials.json
+backend/token.json
+
+# Git
+.git/
+.gitignore
+
+# Documentation
+*.md
+!backend/README.md
+!frontend/README.md
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+logs/
+
+# Build files
+dist/
+build/
+
+# Environment
+.env
+.env.local
+
+# Data
+data/

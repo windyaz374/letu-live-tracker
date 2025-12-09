@@ -6,13 +6,27 @@ Welcome to **Letu Live Tracker**! This guide will help you find the right docume
 
 ## 🚀 Quick Navigation
 
+### ⭐ Best Starting Points
+
+1. **[DOCKER_GUIDE.md](doc/DOCKER_GUIDE.md)** - Easiest way! One-click setup 🐳
+2. **[INSTALLATION_COMPARISON.md](doc/INSTALLATION_COMPARISON.md)** - Docker vs Traditional
+3. **[QUICKSTART.md](doc/QUICKSTART.md)** - Get running in 5 minutes
+4. **[WINDOWS_INSTALLATION.md](doc/WINDOWS_INSTALLATION.md)** - Complete Windows setup
+
 ### For First-Time Users
-1. **[VISUAL_GUIDE.md](VISUAL_GUIDE.md)** - Step-by-step with pictures
-2. **[QUICKSTART.md](QUICKSTART.md)** - Get running in 5 minutes
-3. **[WINDOWS_INSTALLATION.md](WINDOWS_INSTALLATION.md)** - Complete Windows setup
+1. **[DOCKER_GUIDE.md](doc/DOCKER_GUIDE.md)** - Recommended! Just install Docker 🐳
+2. **[VISUAL_GUIDE.md](doc/VISUAL_GUIDE.md)** - Step-by-step with pictures
+3. **[QUICKSTART.md](doc/QUICKSTART.md)** - Get running in 5 minutes
+4. **[WINDOWS_INSTALLATION.md](doc/WINDOWS_INSTALLATION.md)** - Complete Windows setup
 
 ### For Setting Up Google Sheets
-- **[GOOGLE_SHEETS_SETUP.md](GOOGLE_SHEETS_SETUP.md)** - Detailed Google API setup
+- **[GOOGLE_SHEETS_SETUP.md](doc/GOOGLE_SHEETS_SETUP.md)** - Detailed Google API setup
+
+### For Installation
+- **[DOCKER_GUIDE.md](doc/DOCKER_GUIDE.md)** - 🐳 Docker installation (RECOMMENDED!)
+- **[INSTALLATION_COMPARISON.md](doc/INSTALLATION_COMPARISON.md)** - Docker vs Traditional
+- **[QUICKSTART.md](doc/QUICKSTART.md)** - Traditional installation
+- **[WINDOWS_INSTALLATION.md](doc/WINDOWS_INSTALLATION.md)** - Windows-specific guide
 
 ### For Daily Use
 - **[EXAMPLES.md](EXAMPLES.md)** - Usage examples and workflows

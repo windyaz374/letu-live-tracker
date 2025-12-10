@@ -32,20 +32,20 @@ echo √ Docker is running
 
 echo.
 echo [2/6] Checking credentials...
-if not exist "backend\credentials.json" (
-    echo [WARNING] credentials.json not found
-    echo.
-    echo Current directory: %CD%
-    echo Looking for: %CD%\backend\credentials.json
-    echo.
-    echo Please follow these steps:
-    echo 1. Complete Google Sheets setup (see doc\GOOGLE_SHEETS_SETUP.md)
-    echo 2. Place credentials.json in backend\ folder
-    echo 3. Run this script again
-    echo.
-    pause
-    exit /b 1
-)
+@REM if not exist "backend\credentials.json" (
+@REM     echo [WARNING] credentials.json not found
+@REM     echo.
+@REM     echo Current directory: %CD%
+@REM     echo Looking for: %CD%\backend\credentials.json
+@REM     echo.
+@REM     echo Please follow these steps:
+@REM     echo 1. Complete Google Sheets setup (see doc\GOOGLE_SHEETS_SETUP.md)
+@REM     echo 2. Place credentials.json in backend\ folder
+@REM     echo 3. Run this script again
+@REM     echo.
+@REM     pause
+@REM     exit /b 1
+@REM )
 echo √ credentials.json found
 
 echo.
